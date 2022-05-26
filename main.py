@@ -9,7 +9,7 @@ from pyquery import PyQuery as pq
 from pyshortcuts import make_shortcut
 
 window = tk.Tk()
-# elevate(show_console=False)
+elevate(show_console=False)
 
 
 def Download(url: str, path: str, action: tk.Label):
@@ -79,7 +79,7 @@ def Stage2():
 
     dir_set = tk.Entry(box, width=50)
     #default_dir = r"C:\Program Files (x86)\Octave"
-    default_dir = r"C:\Users\ReCor\Documents"
+    default_dir = r"C:\Program Files"
     dir_set.insert(0, default_dir)
     dir_set.pack()
 

@@ -58,7 +58,7 @@ def Stage1():
     box.pack()
 
     label = tk.Label(box, text="Install Octave", font=("Poppins", 25),bg="white")
-    label.pack(padx=20, pady=10)
+    label.pack(padx=20, pady=50)
 
     button = customtkinter.CTkButton(width=120,
                                     height=32,
@@ -91,13 +91,25 @@ def Stage2():
     dir_set.insert(0, default_dir)
     dir_set.pack(padx=20, pady=10)
 
-    dir_picker = tk.Button(box, text="📁", width=10,
-                           command=lambda: PickDir(default_dir, dir_set), bg="#00D4FF")
+    dir_picker = customtkinter.CTkButton(width=120,
+                                         height=32,
+                                         fg_color="#00D4FF", 
+                                         hover_color="#1ECEF1",
+                                         border_width=0,
+                                         corner_radius=8, 
+                                         text="📁",
+                                         command=lambda: PickDir(default_dir, dir_set))
     dir_picker.pack(padx=20, pady=10)
 
-    next_button = tk.Button(box, text="Next", width=10,
-                            command=lambda: Stage3(dir_set.get()), bg="#00D4FF")
-    next_button.pack(padx=70, pady=60)
+    next_button = customtkinter.CTkButton(width=120,
+                                         height=32,
+                                         fg_color="#00D4FF", 
+                                         hover_color="#1ECEF1",
+                                         border_width=0,
+                                         corner_radius=8, 
+                                         text="Next",
+                                         command=lambda: Stage3(dir_set.get())) 
+    next_button.pack(padx=10, pady=10)
 
 
 def Stage3(path: str):

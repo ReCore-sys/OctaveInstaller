@@ -86,7 +86,7 @@ def Stage2():
     label.pack(padx=20, pady=10)
 
     dir_set = tk.Entry(box, width=50, bg="#00D4FF")
-    #default_dir = r"C:\Program Files (x86)\Octave"
+    default_dir = r"C:\Program Files (x86)\Octave"
     default_dir = r"C:\Program Files"
     dir_set.insert(0, default_dir)
     dir_set.pack(padx=20, pady=10)
